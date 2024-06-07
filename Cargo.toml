@@ -15,10 +15,10 @@ eframe = { version = "0.27.1", default-features = false, features = [
 ] }
 ethread = { path = "../../ethread" }
 
-log = {worksace = true}
-serde = { worksace = true, features = ["derive"] }
+log = {workspace = true}
+serde = { workspace = true, features = ["derive"] }
 api_structure = { workspace = true }
-image = { worksace = true, features = ["jpeg", "gif", "qoi"] }
+image = { workspace = true, features = ["jpeg", "gif", "qoi"] }
 
 #fetching
 serde_json = {workspace = true}
@@ -56,13 +56,6 @@ tokio = { workspace = true, features = ["sync"] }
 [features]
 default = ["dev"]
 dev = []
-
-# Optimize all dependencies even in debug builds:
-[profile.dev.package."*"]
-opt-level = 2
-
-
-[patch.crates-io]
 
 # If you want to use the bleeding edge version of egui and eframe:
 # egui = { git = "https://github.com/emilk/egui", branch = "master" }
